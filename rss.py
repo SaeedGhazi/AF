@@ -1,9 +1,8 @@
 import feedparser
-NewsFeed = feedparser.parse("https://www.tabnak.ir/fa/rss/allnews")
-entry = NewsFeed.entries[99]
+NewsFeed = feedparser.parse("https://www.tabnak.ir/fa/rss/2")
+dim = len(NewsFeed)
 
-print (entry.keys())
-print (len(NewsFeed.entries))
+entry = NewsFeed.entries[dim -1]
 
 print (entry.title)
 print ("******")
